@@ -6,11 +6,17 @@ import Hello from './helloWorld';
 import reportWebVitals from './reportWebVitals';
 import {Say, Seed} from './Say';
 import ClockNew from './Clock';
+import Toggle from './Toggle';
+import LoginController from './Login';
 
 
 
 ReactDOM.render(
-    <ClockNew name='aaaa'/>,
+    <div>
+        <ClockNew name='aaaa'/>
+        <Toggle />
+        <LoginController />
+    </div>,
     document.getElementById('root')
 );
 
