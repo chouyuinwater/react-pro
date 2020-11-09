@@ -2,6 +2,9 @@ import React from 'react';
 import Greeting from './Greeting';
 
 function Logout(props) {
+    const event = props.event;
+    console.log('event = ', JSON.stringify(event));
+
     return (
         <button onClick={props.onClick}>Logout</button>
     );
@@ -33,8 +36,13 @@ class LoginController extends React.Component {
     render() {
         const loginFlag = this.state.loginFlag;
         let loginDom = '';
+        let event = [{
+            loginFlag: loginFlag,
+            loginDom: 'this.handleLogout'
+        }];
+
         if (loginFlag) {
-            loginDom = <Logout onClick={this.handleLogout} />;
+            loginDom = <Logout event={event} onClick={this.handleLogout}/>;
         } else {
             loginDom = <Login onClick={this.handleLogin} />;
 
