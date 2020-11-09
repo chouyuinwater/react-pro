@@ -5,16 +5,16 @@ import App from './App';
 import Hello from './helloWorld';
 import reportWebVitals from './reportWebVitals';
 import {Say, Seed} from './Say';
-import Clock from './Clock';
-let ticks = function tick() {
+import ClockNew from './Clock';
 
-    ReactDOM.render(
-        <Clock name="小猪"/>,
-        document.getElementById('root')
-    );
-}
 
-setInterval(ticks, 1000);
+
+ReactDOM.render(
+    <ClockNew name='aaaa'/>,
+    document.getElementById('root')
+);
+
+// setInterval(ticks, 1000);
 
 // ReactDOM.render(
 //   <React.StrictMode>
